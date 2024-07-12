@@ -62,7 +62,7 @@ class M1Logger(object):
 
         print()
 
-        with open(self.filename,'w') as output_fid:
+        with open(self.filename,'a') as output_fid:
             while not self.done:
                 # Read data from sensor
                 qsize = self.wind_sensor.data_queue.qsize()

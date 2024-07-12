@@ -1,0 +1,27 @@
+## Permissions for reading usb file # do not do this within a virtual environment -- open new terminal
+sudo chmod 777 '/dev/ttyACM0'
+#using code from https://github.com/willdickson/m1_wind_sensor
+
+##to activate virtual env
+conda activate wind_sensor
+
+## Go into python termninal
+python3
+
+## Switch to directory to store anemometer data
+
+## Import M1Logger and start acquisition
+from m1_wind_sensor import M1Logger
+logger = M1Logger(port='/dev/ttyACM0', filename='anemometer_1012tst.txt', window_size=120.0)
+logger.run()
+
+
+#to stop logger 'Ctl c'
+'quit()' 
+
+## conda deactivate to deactive virtual env
+conda deactivate 
+######
+'deactivate' #to quit python3
+
+
