@@ -1,0 +1,4 @@
+name: wind_sensor
+channels:
+  - defaults
+prefix: /home/flyranch/miniconda3/envs/wind_sensor
